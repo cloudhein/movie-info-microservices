@@ -1,0 +1,20 @@
+# prepare a distroless source context to copy files from
+FROM cgr.dev/chainguard/static@sha256:1ff7590cbc50eaaa917c34b092de0720d307f67d6d795e4f749a0b80a2e95a2c AS distroless_source
+
+# prepare a base dev to modify file contents
+FROM ubuntu:noble AS ubuntu_source
+
+# Modify contents of container
+COPY --from=distroless_source /etc/ /home/etc
+COPY --from=distroless_source /home/nonroot /home/nonroot
+RUN echo istio-proxy:x:1337: >> /home/etc/group
+RUN echo istio-proxy:x:1337:1337:istio-proxy:/nonexistent:/sbin/nologin >> /home/etc/passwd
+
+# Customize distroless with the following:
+# - password file
+# - groups file
+# - /home/nonroot directory
+FROM distroless_source
+COPY --from=ubuntu_source /home/etc/passwd /etc/passwd
+COPY --from=ubuntu_source /home/etc/group /etc/group
+COPY --from=ubuntu_source /home/nonroot /home/nonroot
