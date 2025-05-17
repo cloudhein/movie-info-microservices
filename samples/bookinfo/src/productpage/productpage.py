@@ -318,7 +318,7 @@ def getProducts():
         {
             'id': 0,
             'title': 'Space Movies', 
-            'descriptionHtml': '<a href="https://www.netflix.com/es-en/title/70305903">Interstellar</a>: With humanity teetering on the brink of extinction, a group of astronauts travels through a wormhole in search of another inhabitable planet.'
+            'descriptionHtml': '<a href="https://www.netflix.com/es-en/title/70305903">Interstellar</a>: <b>With humanity teetering on the brink of extinction, a group of astronauts travels through a wormhole in search of another inhabitable planet.</b>',
         }
     ]
 

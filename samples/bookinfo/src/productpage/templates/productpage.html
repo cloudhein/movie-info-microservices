@@ -29,7 +29,7 @@
 {% endblock %}
 {% block content %}
 
-<nav class="bg-gray-800">
+<nav class="bg-green-800">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <a href="#" class="text-white px-3 py-2 text-lg font-medium" aria-current="page">Microservices Application</a>
@@ -38,7 +38,7 @@
         <a href="#" class="group block flex-shrink-0">
           <div class="flex items-center">
             <div>
-              <img class="inline-block h-9 w-9 rounded-full bg-blue-50" src="/static/img/interstellar.jpg" alt="">
+              <img class="inline-block h-9 w-9 rounded-full bg-red-50" src="/static/img/interstellar.jpg" alt="">
             </div>
             <div class="ml-4">
               <p class="text-base font-medium text-gray-50">{{ user }}</p>
@@ -68,8 +68,26 @@
       </button>
     </div>
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-        <svg  class="mx-auto h-24 w-auto" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 320 320"><g id="logo" fill="#466BB0"><polygon id="hull" points="80 250 240 250 140 280 80 250"/><polygon id="mainsail" points="80 240 140 230 140 120 80 240"/><polygon id="headsail" points="150 230 240 240 150 40 150 230"/></g></svg>
-        <h2 class="mt-5 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Sign in to BookInfo</h2>
+        <svg class="mx-auto h-24 w-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320">
+  <g id="logo" fill="#466BB0">
+    <!-- Outer reel circle -->
+    <circle id="reel-outer" cx="160" cy="160" r="100"/>
+    <!-- Inner reel hub -->
+    <circle id="reel-hub" cx="160" cy="160" r="40" fill="#FFFFFF"/>
+    <!-- Reel spokes -->
+    <rect x="155" y="60" width="10" height="60"/>
+    <rect x="155" y="200" width="10" height="60"/>
+    <rect x="60" y="155" width="60" height="10"/>
+    <rect x="200" y="155" width="60" height="10"/>
+    <!-- Film sprocket holes (top row) -->
+    <rect x="120" y="20" width="20" height="10"/>
+    <rect x="180" y="20" width="20" height="10"/>
+    <!-- Film sprocket holes (bottom row) -->
+    <rect x="120" y="290" width="20" height="10"/>
+    <rect x="180" y="290" width="20" height="10"/>
+  </g>
+</svg>
+      <h2 class="mt-5 text-center text-2xl font-bold leading-9 tracking-tight text-red-900">Sign in to Movie-Info Application</h2>
     </div>
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
       <form class="space-y-6" method="post" action='login' name="login_form">
@@ -92,8 +110,8 @@
         </div>
       </form>
       <p class="mt-10 text-center text-sm text-gray-500">
-        Not using Istio yet?
-        <a href="https://istio.io" target="_blank" class="font-semibold leading-6 text-blue-600 hover:text-blue-500">Start here</a>
+        Not watching Interstellar Movie Yet??
+        <a href="https://youtu.be/zSWdZVtXT7E?si=uJG-9l3KnM364waD" target="_blank" class="font-semibold leading-6 text-red-600 hover:text-blue-500">Start here</a>
       </p>
     </div>
   </div>
@@ -107,7 +125,7 @@
     <p class="mt-6 text-xl leading-8 text-gray-600">{{ product.descriptionHtml }}</p>
     {% endautoescape %}
     <div class="mt-6">
-      <a href="https://www.studiobinder.com/blog/interstellar-explained-meaning-plot-summary/" target="_blank" class="text-sm font-semibold leading-6 text-blue-600 hover:text-blue-700">Learn more about Interstellar <span aria-hidden="true">→</span></a>
+      <a href="https://www.studiobinder.com/blog/interstellar-explained-meaning-plot-summary/" target="_blank" class="text-sm font-semibold leading-6 text-red-600 hover:text-blue-700">Learn more about Interstellar <span aria-hidden="true">→</span></a>
     </div>
 
   </div>

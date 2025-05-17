@@ -28,7 +28,7 @@
     table th,
     table td {
         padding: .5em;
-        border: 1px solid lightgrey;
+        border: 1px solid rgb(94, 55, 55);
     }
 </style>
 {% endblock %}
@@ -46,14 +46,14 @@
         {{ serviceTable }}
         {% endautoescape %}
         <p>
-            Click on one of the links below to auto generate a request to the backend as a real user or a tester
+            Click on one of the links below to see our movie-review application!
         </p>
         <ul>
             <li>
-                <a href="/productpage?u=normal" class="text-blue-500 hover:text-blue-600">Normal user</a>
+                <a href="/productpage?u=normal" class="text-red-500 hover:text-blue-600">Normal user</a>
             </li>
             <li>
-                <a href="/productpage?u=test" class="text-blue-500 hover:text-blue-600">Test user</a>
+                <a href="/productpage?u=test" class="text-red-500 hover:text-blue-600">Test user</a>
             </li>
         </ul>
     </div>

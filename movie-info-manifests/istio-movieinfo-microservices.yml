@@ -330,7 +330,7 @@ spec:
       serviceAccountName: bookinfo-productpage
       containers:
       - name: productpage
-        image: mrnanda/examples-movieinfo-productpage:6.0
+        image: mrnanda/examples-movieinfo-productpage:9.2
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
